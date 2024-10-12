@@ -42,3 +42,14 @@
 - code in the file `[ index5.html ]` in the `Code4` folder
 
 # Commit 6: Application of saving the Object in the local storage -> using input field
+
+# Commit 7:
+
+```js
+const myData = JSON.parse(localStorage.getItem("myData")) || {};
+```
+
+- The code is used to initialize the myData object by checking if there’s any existing data in localStorage.
+- If localStorage contains a valid JSON string for myData, JSON.parse converts that string into a JavaScript object.
+- If the data does not exist (i.e., localStorage.getItem('myData') returns null), the || {} part provides a fallback to create an empty object. This means myData will be initialized to an empty object ({}) if no previous data exists.
+- `Result:` myData will contain the previously stored name and age, or an empty object if there’s no existing data. This allows the code to continue working seamlessly without errors.
