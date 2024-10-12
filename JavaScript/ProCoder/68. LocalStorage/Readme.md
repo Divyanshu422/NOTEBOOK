@@ -40,3 +40,5 @@
 # Commit 5: Saving the Object in the local storage [ index5.html file in Code 4 folder]
 
 - code in the file `[ index5.html ]` in the `Code4` folder
+
+# Commit 6: Application of saving the Object in the local storage -> using input field
