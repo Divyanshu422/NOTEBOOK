@@ -7,18 +7,20 @@ const nameElement = document.querySelector('.name-tag');
 const ageElement = document.querySelector('.age-tag');
 
 //  Step 1: Create the Object
-const myData = {
-    name: '',
-    age:  '',
-}
+const myData = JSON.parse(localStorage.getItem('myData'))||{};
 
 
-
-// Reflecting the value on the load of html page on the UI
+// Reflecting the value on the load of HTML page on the UI
 const storedData = JSON.parse(localStorage.getItem('myData'));
-console.log(storedData);
-nameElement.innerHTML = storedData.name;
-ageElement.innerHTML = storedData.age;
+
+// Check if storedData is null
+if (storedData) {
+    nameElement.innerHTML = storedData.name || ''; // Set name if exists
+    ageElement.innerHTML = storedData.age || '';   // Set age if exists
+} else {
+    nameElement.innerHTML = ''; // Set to empty if no data
+    ageElement.innerHTML = '';   // Set to empty if no data
+}
 
 
 // Storing the data and overRiding the localStorage values -> name
