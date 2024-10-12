@@ -15,6 +15,7 @@
             localStorage.setItem('myName', event.target.value);
             console.log(localStorage);
             // nameElement.innerText = event.target.value;
+            nameElement.innerText = localStorage.getItem('myName');
 
         }
     );

@@ -13,3 +13,17 @@
 
 - Accessing the input tag value and storing it in the localStorage
 - then using localStorage we are setting the value of input tag
+
+# Commit 3: [ Code 3]
+
+- we have created the 2 input tag -> for name and age.
+- In js file we have used Line `8 & 11` as same similarly Line `15 & 18`
+  - Lines 8 and 15 fetch the values stored in Local Storage for myName and myAge, respectively, and display them on the UI. This ensures that when the index3.html file is loaded, any previously stored values are shown.
+
+### Updating Local Storage and UI:
+
+- Lines 11 and 18 set up event listeners for the input fields.
+- When the user types in the name input field, the input event triggers, and the following happens:
+- The new value is saved to Local Storage using localStorage.setItem('myName', event.target.value).
+- The displayed name on the UI is updated to reflect this change using nameElement.innerText = localStorage.getItem('myName').
+- Similarly, for the age input field, when the user types, the value is updated in Local Storage and reflected on the UI.
