@@ -6,3 +6,10 @@
 <div style="text-align: center">
 <img src="./Images/1.png" alt="Alt Text" width="600">
 </div>
+
+---
+
+# Commit 2: [ Code2]
+
+- Accessing the input tag value and storing it in the localStorage
+- then using localStorage we are setting the value of input tag
