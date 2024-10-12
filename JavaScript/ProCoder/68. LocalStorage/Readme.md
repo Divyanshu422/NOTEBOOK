@@ -27,3 +27,12 @@
 - The new value is saved to Local Storage using localStorage.setItem('myName', event.target.value).
 - The displayed name on the UI is updated to reflect this change using nameElement.innerText = localStorage.getItem('myName').
 - Similarly, for the age input field, when the user types, the value is updated in Local Storage and reflected on the UI.
+
+# Commit 4: changing the type of input tag in the code 3:
+
+- since age is number so we have changed the type of age tag [ input ] to number
+- index3.html [folder:Code3]
+
+```html
+<input class="number" type="text" placeholder="Enter your age" />
+```
