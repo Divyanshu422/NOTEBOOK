@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store Object in Local Storage</title>
+  </head>
+  <body>
+    <script>
+      // Step 1: Create an object
+      const user = {
+        name: "Alice",
+        age: 30,
+        email: "alice@example.com",
+      };
+
+      // Step 2: Convert the object to a JSON string
+      const userJSON = JSON.stringify(user);
+
+      // Step 3: Store the JSON string in Local Storage
+      localStorage.setItem("user", userJSON);
+
+      // To retrieve the object from Local Storage
+      const storedUserJSON = localStorage.getItem("user");
+      console.log("The JSON data is ", storedUserJSON);
+
+      // Convert the JSON string back to an object
+      const storedUser = JSON.parse(storedUserJSON);
+
+      // Display the stored object
+      console.log("The object after Parsing the Json", storedUser); // Outputs: { name: 'Alice', age: 30, email: 'alice@example.com' }
+    </script>
+  </body>
+</html>

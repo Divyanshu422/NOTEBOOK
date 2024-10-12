@@ -36,3 +36,7 @@
 ```html
 <input class="number" type="text" placeholder="Enter your age" />
 ```
+
+# Commit 5: Saving the Object in the local storage [ index5.html file in Code 4 folder]
+
+- code in the file `[ index5.html ]` in the `Code4` folder
