@@ -1,8 +1,13 @@
-# Printing the digit in reverse order
+# Displaying Multiplication table for a given number
 
-number = 62331
-while  number < 0:
-    num = number % 10
-    print(num)
-    nnumber = number / 10
-print('Thanks for execution')
+number = int(input('Enter the number'))
+
+multipling_factor = 1
+
+while multipling_factor < 11:
+    print(f'{number} * {multipling_factor} = {number * multipling_factor}')
+    multipling_factor += 1
+print('Thanks for visiting')
+
+
+
