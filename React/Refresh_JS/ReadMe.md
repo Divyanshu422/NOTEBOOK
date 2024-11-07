@@ -13,3 +13,7 @@
 # class in JavaScript:
 
 - class are the bluePrint for the object
+
+# class in Inheritance:
+
+- when you use inheritance in JavaScript classes, you need to call `super()` in the constructor of the child class if the child class has its own constructor. The super() function calls the constructor of the parent class, allowing the child class to inherit properties and methods from the parent.
