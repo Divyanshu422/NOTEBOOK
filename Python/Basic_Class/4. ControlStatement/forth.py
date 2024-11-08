@@ -1,5 +1,5 @@
 # Check if a number is a palindrome in Python
-
+'''
 # Input a number from the user
 original_number = int(input('Enter a number: '))
 
@@ -21,6 +21,17 @@ if original_number == reverse_number:
     print(f'{original_number} is a palindrome.')
 else: 
     print(f'{original_number} is not a palindrome.')
+'''
+     
+# --------------------------------------------------------------------
+
+# Converting the number to binary representation
+number = int(input("Enter a number to convert to binary: "))
+binary_representation = ''
+
+while number > 0 :
+    binary_representation = str(number % 2) + binary_representation
+    number = number // 2
 
 
-    
+print(f'Binary representation of {number} is {binary_representation}')
