@@ -22,4 +22,18 @@ while number > 0:
 print(f'Sum of digits are {sum}')
 '''
 
-# ----------------------------------------------------------------'''
+# ----------------------------------------------------------------
+# Reversing
+
+'''
+number = int(input('Enter the number '))
+reversed_number = 0
+
+while number > 0:
+    reversed_number = reversed_number * 10 + (number % 10)
+    number = number // 10 # Floor division
+
+print(f'Reversed number is {reversed_number}')
+'''
+
+# ----------------------------------------------------------------
