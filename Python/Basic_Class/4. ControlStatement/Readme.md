@@ -19,3 +19,9 @@
 
 - Import the random module
 - Syntax: `random.random()` or `random.randint(a,b)`
+
+# Using the else with the while loop [ Seventh.py ]
+
+- else works with a while loop:
+  - The else block in a while loop runs if the while condition becomes false.
+  - If a break statement interrupts the loop, the else block does not execute.
