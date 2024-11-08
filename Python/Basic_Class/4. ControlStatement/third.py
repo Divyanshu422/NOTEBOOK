@@ -23,7 +23,7 @@ print(f'Sum of digits are {sum}')
 '''
 
 # ----------------------------------------------------------------
-# Reversing
+# Reversing the number
 
 '''
 number = int(input('Enter the number '))
