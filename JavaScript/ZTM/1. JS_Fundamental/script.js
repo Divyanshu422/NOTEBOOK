@@ -21,5 +21,5 @@
 // console.log(typeof year); //* number not the int
 
 // Taking input from the user
-const age = prompt("Enter the age of the user");
-console.log(age); //* undefined
+// const age = prompt("Enter the age of the user");
+// console.log(age); //* undefined
