@@ -13,3 +13,11 @@ console.log(message); // * Hello, my name is Alice and I am 25 years old.
 // Using plus sign -> Concatenation
 console.log("I'm " + name + ", a " + age + " years old"); // I'm Alice, a 25 years old
 // * The age is the number -> which is type coercion into string internally
+
+// * Multi line string  -> Old way
+
+console.log("This is multiline string \nin which we have used slash_n");
+
+// * New way -> Template literal
+console.log(`This is multiline string 
+in which we have used template literal`);
