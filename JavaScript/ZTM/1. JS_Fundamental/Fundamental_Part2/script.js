@@ -68,16 +68,62 @@
 
 //! Function calling the function:
 
-const cutFruitPieces = function (fruit) {
-  return 4 * fruit;
+// const cutFruitPieces = function (fruit) {
+//   return 4 * fruit;
+// };
+
+// function fruitProcessor(apples, oranges) {
+//   const applePieces = cutFruitPieces(apples);
+//   const orangePieces = cutFruitPieces(oranges);
+
+//   const juice = `Juice with ${applePieces} apple and ${orangePieces} oranges is ready`;
+//   return juice;
+// }
+
+// console.log(fruitProcessor(5, 3)); //* Juice with 20 apple and 12 oranges is ready
+
+//* =================**************************======================
+//! Function calling the function:
+// function outerFunction() {
+//   function innerFunction(greeting) {
+//     return `${greeting}, ${name}!`; // 'name' is not defined in any accessible scope
+//   }
+//   console.log(innerFunction("Hello"));
+// }
+
+// outerFunction(); // ReferenceError: name is not defined
+
+//* =================**************************======================
+//! Function calling the function:
+// function outerFunction(name) {
+//   function innerFunction(greeting) {
+//     return `${greeting}, ${name}!`;
+
+//   }
+//   console.log(innerFunction("Hello")); // ! Hello, undefined!
+// }
+
+// // Call the outer function
+// outerFunction();
+
+//* =================**************************======================
+//! Exam Module
+
+const calcAverage = (score1, score2, score3) => {
+  return (score1 + score2 + score3) / 3;
 };
 
-function fruitProcessor(apples, oranges) {
-  const applePieces = cutFruitPieces(apples);
-  const orangePieces = cutFruitPieces(oranges);
+const checkWinner = (avgScore1, avgScore2) => {
+  if (avgScore1 > 2 * avgScore2) {
+    return `Dolphin wins (${avgScore1} vs. ${avgScore2})`;
+  } else if (avgScore1 * 2 < avgScore2) {
+    return `Koalas wins (${avgScore2} vs. ${avgScore1} )`;
+  } else {
+    return;
+  }
+};
 
-  const juice = `Juice with ${applePieces} apple and ${orangePieces} oranges is ready`;
-  return juice;
-}
+const dolphinScore = calcAverage(85, 54, 41);
+const koalaScore = calcAverage(23, 34, 27);
 
-console.log(fruitProcessor(5, 3)); //* Juice with 20 apple and 12 oranges is ready
+console.log(checkWinner(dolphinScore, koalaScore));
