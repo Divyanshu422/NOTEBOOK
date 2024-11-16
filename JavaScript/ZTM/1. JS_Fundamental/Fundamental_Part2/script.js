@@ -109,19 +109,16 @@
 //* =================**************************======================
 //! Exam Module
 
-const calcAverage = (score1, score2, score3) => {
-  return (score1 + score2 + score3) / 3;
-};
-
 const checkWinner = (avgScore1, avgScore2) => {
   if (avgScore1 > 2 * avgScore2) {
-    return `Dolphin wins (${avgScore1} vs. ${avgScore2})`;
+    return `Dolphin wins 🏆 (${avgScore1} vs. ${avgScore2})`;
   } else if (avgScore1 * 2 < avgScore2) {
-    return `Koalas wins (${avgScore2} vs. ${avgScore1} )`;
+    return `Koalas wins 🏆 (${avgScore2} vs. ${avgScore1} )`;
   } else {
-    return;
+    return `No Team wins`;
   }
 };
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 
 const dolphinScore = calcAverage(85, 54, 41);
 const koalaScore = calcAverage(23, 34, 27);
