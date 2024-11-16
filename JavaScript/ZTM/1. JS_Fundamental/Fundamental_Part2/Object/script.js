@@ -27,6 +27,26 @@
 
 // * =============*****************================
 
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   birthYear: 1995,
+//   age: 29,
+//   job: "teacher",
+//   hobbies: ["reading", "teaching"],
+//   friend: ["Michael", "John", "Divyanshu"],
+// };
+
+// // * Adding the property using dot and Bracket
+// jonas.location = "Berlin";
+// jonas["twitter"] = "@jonasschmedtmann";
+// console.log(
+//   `${jonas.firstName} has ${jonas.friend.length} friends, and his best friend is ${jonas.friend[0]}`
+// );
+// //* Jonas has 3 friends, and his best friend is Michael
+
+// * ----------------**************----------------**************----------------
+
 const jonas = {
   firstName: "Jonas",
   lastName: "Schmedtmann",
@@ -37,10 +57,16 @@ const jonas = {
   friend: ["Michael", "John", "Divyanshu"],
 };
 
-// * Adding the property using dot and Bracket
-jonas.location = "Berlin";
-jonas["twitter"] = "@jonasschmedtmann";
-console.log(
-  `${jonas.firstName} has ${jonas.friend.length} friends, and his best friend is ${jonas.friend[0]}`
+const interestedIn = prompt(
+  "what would you like to about jonas -> firstName, lastName, age, job, friend"
 );
-//* Jonas has 3 friends, and his best friend is Michael
+// console.log(jonas.interestedIn) -> will give undefined
+
+// * We known in javaScript -> undefined is falsy value hence can be used with conditional statement
+if (jonas[interestedIn]) {
+  console.log(jonas[interestedIn]);
+} else {
+  console.log("wrong request!");
+}
+
+// * ----------------**************----------------**************----------------
