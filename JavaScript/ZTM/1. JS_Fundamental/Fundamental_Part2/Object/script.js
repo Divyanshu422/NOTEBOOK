@@ -47,26 +47,59 @@
 
 // * ----------------**************----------------**************----------------
 
-const jonas = {
-  firstName: "Jonas",
-  lastName: "Schmedtmann",
-  birthYear: 1995,
-  age: 29,
-  job: "teacher",
-  hobbies: ["reading", "teaching"],
-  friend: ["Michael", "John", "Divyanshu"],
-};
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   birthYear: 1995,
+//   age: 29,
+//   job: "teacher",
+//   hobbies: ["reading", "teaching"],
+//   friend: ["Michael", "John", "Divyanshu"],
+// };
 
-const interestedIn = prompt(
-  "what would you like to about jonas -> firstName, lastName, age, job, friend"
-);
-// console.log(jonas.interestedIn) -> will give undefined
+// const interestedIn = prompt(
+//   "what would you like to about jonas -> firstName, lastName, age, job, friend"
+// );
+// // console.log(jonas.interestedIn) -> will give undefined
 
-// * We known in javaScript -> undefined is falsy value hence can be used with conditional statement
-if (jonas[interestedIn]) {
-  console.log(jonas[interestedIn]);
-} else {
-  console.log("wrong request!");
-}
+// // * We known in javaScript -> undefined is falsy value hence can be used with conditional statement
+// if (jonas[interestedIn]) {
+//   console.log(jonas[interestedIn]);
+// } else {
+//   console.log("wrong request!");
+// }
 
 // * ----------------**************----------------**************----------------
+
+// console.log(typeof function () {}); // function
+
+// let sayHello = function () {
+//   console.log("Hello!");
+// };
+
+// function doSomething(action) {
+//   action();
+// }
+// doSomething(sayHello); // Hello!
+
+//* ----------------**************----------------**************----------------
+
+// Assinging the function to the object
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Schmedtmann",
+//   birthYear: 1995,
+//   age: 29,
+//   job: "teacher",
+//   hobbies: ["reading", "teaching"],
+//   friend: ["Michael", "John", "Divyanshu"],
+
+//   calcAge: function () {
+//     this.age = 2037 - this.birthYear;
+//     return this.age;
+//   },
+// };
+
+// console.log(jonas.calcAge()); //* 42
+// console.log(jonas.age); //* 42
+// console.log(jonas.age); //* 42
