@@ -28,4 +28,18 @@ document.querySelector('.check').addEventListener('click', () => {
   if (!guessNumber) {
     document.querySelector('.message').textContent = '⛔️ Enter the number ';
   }
+  // case 2: if the guess number == the secret number'
+  else if (guessNumber === randomNumber) {
+    document.querySelector('.message').textContent = '🎉 Correct Number!';
+    // document.querySelector('body').style = 'background-color: green';
+    document.querySelector('body').style.backgroundColor = 'green';
+  } else if (guessNumber > randomNumber) {
+    document.querySelector('.message').textContent = '📈 Too High!';
+    const value = document.querySelector('.score').textContent;
+    document.querySelector('.score').textContent = value - 1;
+  } else if (guessNumber < randomNumber) {
+    document.querySelector('.message').textContent = '📉 Too Low!';
+    const value = document.querySelector('.score').textContent;
+    document.querySelector('.score').textContent = value - 1;
+  }
 });
