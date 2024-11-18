@@ -12,6 +12,11 @@
 
 // * Implementing the functionality for the game
 
+//* STEP 2: Defining the secret number
+
+const randomNumber = Math.floor(Math.random() * 20) + 1;
+document.querySelector('.number').textContent = randomNumber;
+
 //* STEP 1: adding the event listner to the button on the UI
 
 document.querySelector('.check').addEventListener('click', () => {
