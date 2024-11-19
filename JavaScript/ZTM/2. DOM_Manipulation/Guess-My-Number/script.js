@@ -14,8 +14,8 @@
 
 //* STEP 2: Defining the secret number
 
-const randomNumber = Math.floor(Math.random() * 20) + 1;
-document.querySelector('.number').textContent = randomNumber;
+const secretNumber = Math.trunc(Math.random() * 20) + 1;
+document.querySelector('.number').textContent = secretNumber;
 
 //* STEP 1: adding the event listner to the button on the UI
 
@@ -29,15 +29,15 @@ document.querySelector('.check').addEventListener('click', () => {
     document.querySelector('.message').textContent = '⛔️ Enter the number ';
   }
   // case 2: if the guess number == the secret number'
-  else if (guessNumber === randomNumber) {
+  else if (guessNumber === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number!';
     // document.querySelector('body').style = 'background-color: green';
     document.querySelector('body').style.backgroundColor = 'green';
-  } else if (guessNumber > randomNumber) {
+  } else if (guessNumber > secretNumber) {
     document.querySelector('.message').textContent = '📈 Too High!';
     const value = document.querySelector('.score').textContent;
     document.querySelector('.score').textContent = value - 1;
-  } else if (guessNumber < randomNumber) {
+  } else if (guessNumber < secretNumber) {
     document.querySelector('.message').textContent = '📉 Too Low!';
     const value = document.querySelector('.score').textContent;
     document.querySelector('.score').textContent = value - 1;
