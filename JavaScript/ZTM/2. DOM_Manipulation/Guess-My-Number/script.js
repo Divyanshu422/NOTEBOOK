@@ -34,6 +34,8 @@
           * In the handler function, restore the initial values of the score and secret number variables
           * Restore the inital conditions of the message, number, score and guess input field
           * also restore the original background color (#222) and number width (15rem)
+    * Step 9: Implementing the functionality of highScore:
+        *  HighScore => minumum number of guess user take to guess the number. irrespective of the number of game he plays
 
 */
 
@@ -42,6 +44,9 @@
 // ! Defining the Score value -> which is 20
 let score = 20;
 document.querySelector('.score').textContent = score;
+
+//! HighScore variable
+let highScore = 0;
 
 // !  STEP 2: Defining the secret number
 // the Math.trunc() -> is used to remove the noise from the random number generator. && + 1 is done to include 20 also becoz in Math.random() o/p is always btw 0 to 1 where 1 is not included.
@@ -67,6 +72,10 @@ document.querySelector('.check').addEventListener('click', () => {
     // document.querySelector('body').style = 'background-color: green';
     document.querySelector('body').style.backgroundColor = '#60b347';
     document.querySelector('.number').style.width = '30rem';
+    if (score > highScore) {
+      highScore = score;
+      document.querySelector('.highscore').textContent = highScore;
+    }
   }
   // if the guess number is too high
   else if (guessNumber > secretNumber) {
