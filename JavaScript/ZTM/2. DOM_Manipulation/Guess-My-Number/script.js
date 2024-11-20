@@ -45,7 +45,7 @@ document.querySelector('.score').textContent = score;
 
 // !  STEP 2: Defining the secret number
 // the Math.trunc() -> is used to remove the noise from the random number generator. && + 1 is done to include 20 also becoz in Math.random() o/p is always btw 0 to 1 where 1 is not included.
-const secretNumber = Math.trunc(Math.random() * 20) + 1;
+let secretNumber = Math.trunc(Math.random() * 20) + 1;
 document.querySelector('.number').textContent = '?';
 
 // ! STEP 1: adding the event listner to the button on the UI
