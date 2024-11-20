@@ -7,6 +7,26 @@ const overlay = document.querySelector('.overlay');
 const closeBtn = document.querySelector('.close-modal');
 const openBtns = document.querySelectorAll('.show-modal');
 
-console.log(openBtns);
+// Step 2: Looping over the array -> using for loop
 
-// Step 2: Looping
+for (let i = 0; i < openBtns.length; i++) {
+  openBtns[i].addEventListener('click', function () {
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+  });
+}
+
+//* adding the event listener to the close button
+closeBtn.addEventListener('click', function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+});
+
+/*
+    * Q: What is nodeList in the javaScript
+    * Q: Diference btw textContent vs innerHTML
+    * Q: Diference btw querySelector vs querySelectorAll
+    * Q: what is classList in the javaScript
+
+
+*/
