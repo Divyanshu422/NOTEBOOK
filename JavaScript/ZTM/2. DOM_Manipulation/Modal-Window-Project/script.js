@@ -22,6 +22,11 @@ closeBtn.addEventListener('click', function () {
   overlay.classList.add('hidden');
 });
 
+overlay.addEventListener('click', function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+});
+
 /*
     * Q: What is nodeList in the javaScript
     * Q: Diference btw textContent vs innerHTML
