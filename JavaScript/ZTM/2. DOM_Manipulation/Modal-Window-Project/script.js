@@ -7,25 +7,26 @@ const overlay = document.querySelector('.overlay');
 const closeBtn = document.querySelector('.close-modal');
 const openBtns = document.querySelectorAll('.show-modal');
 
-// Step 2: Looping over the array -> using for loop
+// * sTEP 3: Refactoring the code
+const openModal = function () {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
 
+// Step 2: Looping over the array -> using for loop
 for (let i = 0; i < openBtns.length; i++) {
-  openBtns[i].addEventListener('click', function () {
-    modal.classList.remove('hidden');
-    overlay.classList.remove('hidden');
-  });
+  openBtns[i].addEventListener('click', openModal);
 }
 
 //* adding the event listener to the close button
-closeBtn.addEventListener('click', function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
-});
+closeBtn.addEventListener('click', closeModal);
 
-overlay.addEventListener('click', function () {
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
-});
+// using the callBack function
+overlay.addEventListener('click', () => closeModal());
 
 /*
     * Q: What is nodeList in the javaScript
