@@ -36,13 +36,3 @@ overlay.addEventListener('click', () => closeModal());
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Escape') closeModal();
 });
-
-/*
-    * Q: What is nodeList in the javaScript
-    * Q: Diference btw textContent vs innerHTML
-    * Q: Diference btw querySelector vs querySelectorAll
-    * Q: what is classList in the javaScript
-    * Q: Understand the css of the overlay class and hidden class -
-
-
-*/
