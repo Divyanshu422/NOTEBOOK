@@ -28,11 +28,21 @@ closeBtn.addEventListener('click', closeModal);
 // using the callBack function
 overlay.addEventListener('click', () => closeModal());
 
+//!  what is keyboard events:
+// they are global events -> becoz they dont happen on the specific element of the html. hence we have to listen the keyboard events on the whole documents
+//* for keyboard -> we have 3 events: keydown, keyup and keypress
+
+// applying the keyboard events on document object
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') closeModal();
+});
+
 /*
     * Q: What is nodeList in the javaScript
     * Q: Diference btw textContent vs innerHTML
     * Q: Diference btw querySelector vs querySelectorAll
     * Q: what is classList in the javaScript
+    * Q: Understand the css of the overlay class and hidden class -
 
 
 */
