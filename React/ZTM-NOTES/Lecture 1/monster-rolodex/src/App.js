@@ -6,12 +6,12 @@ function App() {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
-      .then((response) => setMonsters(response));
+      .then((data) => setMonsters(data));
   }, []);
+
   return (
     <div className="App">
       {monsters.map((monster) => {
-        console.log(monster.id);
         return (
           <div key={monster?.id}>
             <h1>{monster?.name}</h1>
