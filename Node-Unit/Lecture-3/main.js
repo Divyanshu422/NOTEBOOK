@@ -9,9 +9,12 @@
 // ! --------------------------**************************---------------------------
 
 // * Accessing the global object of node environment
-console.log(global);
+// console.log(global);
 
-//* Other way to access the global object in Node.js
-console.log(global === globalThis); // true
+// //* Other way to access the global object in Node.js
+// console.log(global === globalThis); // true
 
 // ! --------------------------**************************---------------------------
+
+// this keyword is not applicable inside the node.js
+console.log(this); //* {} -> return empty object
