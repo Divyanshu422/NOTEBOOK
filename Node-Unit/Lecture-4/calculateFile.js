@@ -7,12 +7,12 @@ const calculateSum = function (param1, param2) {
   console.log(sum);
 };
 
-var x = 10;
+const x = 10;
 
 // * Explicitly exporting the function: using module object
 module.exports = {
-  calculateSum,
-  x,
+  calculateSum: calculateSum,
+  x: x,
 };
 
-console.log("2nd time execution", x);
+// console.log("2nd time execution", x);
